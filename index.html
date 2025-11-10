@@ -65,26 +65,44 @@
       max-width: 780px;
       margin: 0 auto 25px;
     }
-    .authors, .affiliation, .footnote, .meta-line {
-      font-size: 1rem;
-      color: var(--fg);
-      margin-bottom: 8px;
-    }
-    .authors span {
-      margin: 0 6px;
-      display: inline-block;
+
+    .authors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 17px;
+      margin-top: 10px;
+      text-align: center;
     }
 
     .authors a {
-      color: inherit;           /* 保持与普通文字相同的颜色 */
-      text-decoration: none;    /* 去掉下划线 */
+      color: #2563eb;           /* 蓝色链接 */
+      text-decoration: none;    /* 无下划线 */
+      font-weight: 600;
     }
 
-    .authors a:hover,
-    .authors a:focus,
-    .authors a:active {
-      color: inherit;           /* 悬停时颜色不变 */
-      text-decoration: none;    /* 悬停时也不出现下划线 */
+    .authors a:hover {
+      color: #1e40af;           /* 悬停时加深 */
+    }
+
+    .authors sup {
+      font-size: 12px;
+      color: #555;
+      margin-left: 2px;
+    }
+
+    .affiliation {
+      text-align: center;
+      color: #444;
+      margin-top: 6px;
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    .affiliation sup {
+      color: #555;
+      font-size: 12px;
     }
 
     .meta-line {
@@ -310,14 +328,17 @@
       </div>
       <p class="subtitle">Improving multimodal mathematical reasoning via <strong>Self-Evolving</strong> reflection loops and <strong>Reward-Guided</strong> fine-tuning.</p>
       <div class="authors">
-        <span><a href="#" target="_blank">Jinhao Chen*</a></span>
-        <span><a href="https://zyang-16.github.io/zhenyang.github.io/" target="_blank">Zhen Yang*†</a></span>
-        <span><a href="#" target="_blank">Jianxin Shi</a></span>
-        <span><a href="#" target="_blank">Tianyu Wo</a></span>
-        <span><a href="https://keg.cs.tsinghua.edu.cn/jietang/" target="_blank">Jie Tang†</a></span>
+        <span><a href="#" target="_blank">Jinhao Chen*</a><sup>1,3</sup></span>
+        <span><a href="https://zyang-16.github.io/zhenyang.github.io/" target="_blank">Zhen Yang*†</a><sup>2,3</sup></span>
+        <span><a href="#" target="_blank">Jianxin Shi</a><sup>1</sup></span>
+        <span><a href="#" target="_blank">Tianyu Wo</a><sup>1</sup></span>
+        <span><a href="https://keg.cs.tsinghua.edu.cn/jietang/" target="_blank">Jie Tang†</a><sup>2</sup></span>
       </div>
-
-      <div class="affiliation">Beihang University · Tsinghua University · Zhipu AI </div>
+      <div class="affiliation">
+        <span><sup>1</sup> Beihang University</span> · 
+        <span><sup>2</sup> Tsinghua University</span> · 
+        <span><sup>3</sup> Zhipu AI</span>
+      </div>
       <div class="footnote">*Equal contribution · †Corresponding author</div>
     <div class="meta-line">Mathematical Reasoning · Vision-Language Model</div>
     <div class="cta">
